@@ -34,12 +34,14 @@
       taskName,
       tasks,
       verbose,
+      prefix,
       _results;
     pkg = grunt.file.readJSON('package.json');
     accountName = process.env.VTEX_ACCOUNT || pkg.accountName || 'basedevmkp';
     environment = process.env.VTEX_ENV || pkg.env || 'vtexcommercestable';
     secureUrl = process.env.VTEX_SECURE_URL || pkg.secureUrl || true;
     port = process.env.PORT || pkg.port || 80;
+    prefix = (pkg.name || 'vtex-dev')+'__';
     console.log('Running on port ' + port);
     compress = grunt.option('compress');
     verbose = grunt.option('verbose');
@@ -199,8 +201,8 @@
       sprite: {
         all: {
           src: 'src/sprite/*.png',
-          dest: 'build/arquivos/spritesheet.png',
-          destCss: 'build/arquivos/sprite.css'
+          dest: 'build/arquivos/'+prefix+'spritesheet.png',
+          destCss: 'build/arquivos/'+prefix+'sprite.css'
         }
       },
       imagemin: {
@@ -281,7 +283,7 @@
           tasks: ['copy:js']
         },
         grunt: {
-          files: ['Gruntfile.coffee']
+          files: ['Gruntfile.js']
         }
       }
     };
