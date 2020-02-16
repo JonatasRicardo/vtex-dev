@@ -1,0 +1,62 @@
+#set($id = $product.Id)
+#set($uri = $product.Uri)
+#set($escapedName = $product.HtmlEscapedName)
+<input type="hidden" class="vtex-cpProdId" value="$id" />
+
+#if ($product.IsInStock)
+<div class="vtexdev-shelf__stock-help vtexdev-shelf__stock-help--in"></div>
+#else
+<div class="vtexdev-shelf__stock-help vtexdev-shelf__stock-help--out"></div>
+#end
+
+<div class="vtexdev-shelf__item" title="$escapedName">
+    <a class="vtexdev-shelf__image-link" href="$uri">
+        <div class="vtexdev-shelf__image">
+            $product.GetImageTag(445,445)
+        </div>
+    </a>
+
+    <div class="vtexdev-shelf__content">
+
+        <a class="vtexdev-shelf__flags" href="$uri">
+            <div class="vtexdev-shelf__flag vtexdev-shelf__flag--discount">$product.DiscountHightLight</div>
+            <div class="vtexdev-shelf__flag vtexdev-shelf__flag--colection">$product.HightLight</div>
+        </a>
+
+        <h3>
+            <a class="vtexdev-shelf__name" href="$uri">
+                $product.Name
+            </a>
+        </h3>
+        
+        <div class="vtexdev-shelf__checkout">
+
+            #if ($product.IsInStock)
+                <a class="vtexdev-shelf__price" href="$uri">
+                    <span class="vtexdev-shelf__list-price">
+                        #if ($product.HasBestPrice)
+                            <span>de: </span><strong>$product.ListPrice</strong>
+                        #end
+                    </span>
+                    <span class="vtexdev-shelf__best-price">por: $product.BestPrice</span>
+                    
+                    <span class="vtexdev-shelf__installment">
+                        #if ($product.NumbersOfInstallment > 1)
+                            ou <strong>${product.NumbersOfInstallment}x de $product.InstallmentValue</strong>
+                        #end
+                    </span>
+
+                </a>
+
+                <div class="vtexdev-shelf__buy-button">
+                    $product.BottomBuy
+                </div>
+            #else
+                <a class="vtexdev-shelf__out-of-stock" href="$uri">
+                    Produto esgotado
+                </a>
+            #end
+
+        </div>
+    </div>
+</div>

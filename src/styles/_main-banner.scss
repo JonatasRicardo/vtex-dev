@@ -1,0 +1,21 @@
+.slick{
+
+    &-slide img {
+      width: 100%;
+      height: auto;
+    }
+  
+    &-prev, &-next {
+      z-index: 9;
+      border-radius: 50%;
+      background: #000 !important;
+    }
+  
+    &-prev {
+      left: 15px;
+    }
+  
+    &-next {
+      right: 15px;
+    }
+  }

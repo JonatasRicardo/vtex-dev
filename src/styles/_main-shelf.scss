@@ -1,0 +1,115 @@
+.vtexdev-shelf {
+    ul {
+        padding: 0;
+    }
+    li[layout] {
+        list-style: none;
+        display: inline-block;
+        vertical-align: top;
+        margin: 5px 0 15px 1%;
+        width: 23.75%;
+    }
+    &__stock-help {
+        &--in {
+
+        }
+        &--out {
+
+        }
+    }
+
+    &__item{
+
+    }
+
+    &__image {
+        border: 5px solid $rosa;
+        &-link {
+        
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__content {
+        text-align: center;
+        height: 280px;
+        position: relative;
+        padding-bottom: 90px;
+    }
+
+    &__flags {
+
+    }
+    &__flag {
+        &--discount {}
+        &--colection {}
+    }
+    &__name{
+        font-size: 24px;
+        min-height: 105px;
+        display: block;
+        padding: 10px 0;
+        margin-top: 10px;
+    }
+        
+    &__checkout{
+        color: $preto;
+        a {
+            color: $preto;
+        }
+    }
+
+    &__price {
+
+    }
+
+    &__list-price {
+        span {}
+        strong {}
+    }
+
+    &__best-price {
+    }
+
+    &__installment {
+        strong {
+            font-size: 22px;
+            color: $rosa;
+        }
+    }
+
+    &__buy-button {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        a {
+            background: $rosa;
+            padding: 15px;
+            display: block;
+            color: $branco;
+            margin: 15px 0;
+        }
+    }
+
+   &__out-of-stock {
+
+   }
+}
+
+@media (max-width: 768px) {
+    .vtexdev-shelf {
+        li[layout] {
+            margin: 5px 0 15px 2%;
+            width: 47%;
+        }
+        &__name {
+            font-size: 20px;
+        }
+        &__installment {
+            display: block;
+        }
+    }
+}

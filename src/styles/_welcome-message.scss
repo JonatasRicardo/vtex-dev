@@ -1,0 +1,11 @@
+.vtex__welcome-message {
+    color: $branco;
+    #login{
+      color: $rosa;
+      &:hover{
+        color: $rosa;
+        text-decoration: underline;
+      }
+    }
+  }
+  

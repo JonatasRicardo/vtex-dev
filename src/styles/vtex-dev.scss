@@ -3,6 +3,7 @@ $preto: #000;
 $branco: #fff;
 $azul: #142032;
 
+
 a {
   color: $rosa;
   text-decoration: none;
@@ -12,129 +13,9 @@ a {
   }
 }
 
-header {
-  background: $preto;
-}
-
-.vtex__full-text-search-box {
-
-  legend, label, select {
-    display: none;
-  }
-
-  .fulltext-search-box {
-    padding: 15px;
-    border: 0;
-    color: $rosa;
-  }
-
-  .btn-buscar{
-    border: 0;
-    text-transform: uppercase;
-    padding: 15px;
-    margin-left: 5px;
-    background: $rosa;
-    color: $branco;
-  }
-
-}
-
-
-.vtex__welcome-message {
-  color: $branco;
-  #login{
-    color: $rosa;
-    &:hover{
-      color: $rosa;
-      text-decoration: underline;
-    }
-  }
-}
-
-.vtex__department-links {
-  .menu{
-    padding: 0;
-    li {
-      text-align: center;
-      margin-bottom: 5px;
-      list-style: none;
-      a {
-        background: $azul;
-        color: $branco;
-        text-transform: uppercase;
-        padding: 10px;
-        padding: 10px 40px;
-        display: block;
-      }
-    }
-  }
-}
-
-.vtex__department-navigator {
-  .menu-departamento{
-    background: $rosa;
-    padding: 0;
-    h3 {
-      display: inline-block;
-      margin: 0;
-      a {
-        background: $rosa;
-        color: $azul;
-        text-transform: uppercase;
-        padding: 10px;
-        padding: 10px 40px;
-        display: block;
-        font-size: 18px;
-      }
-      &:hover {
-        a {
-          background: $azul;
-          color: $rosa;
-        }
-        & + ul {
-          display: block;
-        }
-      }
-    }
-    ul {
-      display: none;
-      position: absolute;
-      background: $azul;
-      width: calc(100% - 30px);
-      &:hover{
-        display: block;
-      }
-      li {
-        a {
-          padding: 20px;
-          display: block;
-        }
-      }
-    }
-    .brandFilter {
-      display: none;
-    }
-  }
-}
-
-.slick{
-
-  &-slide img {
-    width: 100%;
-    height: auto;
-  }
-
-  &-prev, &-next {
-    z-index: 9;
-    border-radius: 50%;
-    background: #000 !important;
-  }
-
-  &-prev {
-    left: 15px;
-  }
-
-  &-next {
-    right: 15px;
-  }
-}
+@import "header";
+@import "search-box";
+@import "welcome-message";
+@import "main-menu";
+@import "main-banner";
+@import "main-shelf";

@@ -1,0 +1,23 @@
+.vtex__full-text-search-box {
+
+    legend, label, select {
+      display: none;
+    }
+  
+    .fulltext-search-box {
+      padding: 15px;
+      border: 0;
+      color: $rosa;
+    }
+  
+    .btn-buscar{
+      border: 0;
+      text-transform: uppercase;
+      padding: 15px;
+      margin-left: 5px;
+      background: $rosa;
+      color: $branco;
+    }
+  
+  }
+  
