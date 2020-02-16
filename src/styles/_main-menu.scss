@@ -15,51 +15,51 @@
         }
       }
     }
-  }
+}
   
-  .vtex__department-navigator {
-    .menu-departamento{
-      background: $rosa;
-      padding: 0;
-      h3 {
-        display: inline-block;
-        margin: 0;
+.vtex__department-navigator {
+  .menu-departamento{
+    background: $rosa;
+    padding: 0;
+    h3 {
+      display: inline-block;
+      margin: 0;
+      a {
+        background: $rosa;
+        color: $azul;
+        text-transform: uppercase;
+        padding: 10px;
+        padding: 10px 40px;
+        display: block;
+        font-size: 18px;
+      }
+      &:hover {
         a {
-          background: $rosa;
-          color: $azul;
-          text-transform: uppercase;
-          padding: 10px;
-          padding: 10px 40px;
-          display: block;
-          font-size: 18px;
+          background: $azul;
+          color: $rosa;
         }
-        &:hover {
-          a {
-            background: $azul;
-            color: $rosa;
-          }
-          & + ul {
-            display: block;
-          }
-        }
-      }
-      ul {
-        display: none;
-        position: absolute;
-        background: $azul;
-        width: calc(100% - 30px);
-        &:hover{
+        & + ul {
           display: block;
         }
-        li {
-          a {
-            padding: 20px;
-            display: block;
-          }
-        }
-      }
-      .brandFilter {
-        display: none;
       }
     }
+    ul {
+      display: none;
+      position: absolute;
+      background: $azul;
+      width: calc(100% - 30px);
+      &:hover{
+        display: block;
+      }
+      li {
+        a {
+          padding: 20px;
+          display: block;
+        }
+      }
+    }
+    .brandFilter {
+      display: none;
+    }
   }
+}

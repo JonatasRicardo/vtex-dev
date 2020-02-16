@@ -1,0 +1,19 @@
+.vtexdev-footer {
+    background-color: $azul;
+    color: $branco;
+    ul {
+        margin: 0;
+        padding: 0;
+        li {
+            list-style: none;
+            a {
+                color: $rosa;
+                padding: 5px;
+                display: inline-block;
+            }
+        }
+    }
+    i {
+        margin-left: 15px;
+    }
+}
