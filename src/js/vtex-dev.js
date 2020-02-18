@@ -1,5 +1,5 @@
 // Home
-$('.vtex__contentPlaceHolder--bannerHome').slick({
+$('.vtex__content-place-holder--bannerHome').slick({
     dots: true,
     infinite: true,
     speed: 300,

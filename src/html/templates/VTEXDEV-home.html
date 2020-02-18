@@ -1,34 +1,26 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
-  xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="en-us">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="en-us">
 
 <head>
-    <title>VTEX DEV</title>
-    <vtex:metaTags />
-    <link rel="shortcut icon" href="https://io.vtex.com.br/favico/1.3.0/favico.ico" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-    <link rel="stylesheet" type="text/css" href="/arquivos/vtex-dev__sprite.css" xmlns="http://www.w3.org/1999/xhtml" />
-    <link rel="stylesheet" type="text/css" href="/arquivos/vtex-dev.css" xmlns="http://www.w3.org/1999/xhtml" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>VTEX DEV</title>
+  <vtex:template id="VTEXDEV-import-head" />
 </head>
 
 <body id="home-page">
   <vtex:template id="VTEXDEV-header" />
   <div class="home-banners">
-    <div class="vtex__contentPlaceHolder vtex__contentPlaceHolder--bannerHome">
+    <div class="vtex__content-place-holder vtex__content-place-holder--bannerHome">
       <vtex:contentPlaceHolder id="bannerHome" />
     </div>
   </div>
   <div class="home-prateleira">
-    <div class="vtex__contentPlaceHolder vtex__contentPlaceHolder--prateleiraHome">
+    <div class="vtex__content-place-holder vtex__content-place-holder--prateleiraHome">
       <vtex:contentPlaceHolder id="prateleiraHome" />
     </div>
   </div>
   <vtex:template id="VTEXDEV-footer" />
 </body>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script src="/arquivos/vtex-dev.js" xmlns="http://www.w3.org/1999/xhtml" ></script>
+<vtex:template id="VTEXDEV-import-scripts" />
+
 </html>
