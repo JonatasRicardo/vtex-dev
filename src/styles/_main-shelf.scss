@@ -75,6 +75,7 @@
     }
 
     &__installment {
+        display: block;
         strong {
             font-size: 22px;
             color: $rosa;
@@ -96,6 +97,14 @@
 
    &__out-of-stock {
 
+   }
+
+   &__stock-help{
+       &--out{
+            + .vtexdev-shelf__item {
+                opacity: .5;
+            }
+       }
    }
 }
 
