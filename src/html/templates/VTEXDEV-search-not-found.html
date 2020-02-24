@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="en-us">
+
+<head>
+  <vtex:template id="VTEXDEV-import-head" />
+</head>
+
+<body id="catalog">
+  <vtex:template id="VTEXDEV-header" />
+
+  <section class="container-fluid">
+
+    <div class="vtex__bread-crumb">
+      <vtex.cmc:breadCrumb />
+    </div>
+
+    <div class="row">
+      <article class="message col-12">
+        <h2>
+            Infelizmente não encontramos nenhum resultado para <span id="term-not-found"></span>
+        </h2>
+        <p>
+            Mas talvez você goste dos produtos que separamos para você:
+        </p>
+        <div class="vtex__content-place-holder vtex__content-place-holder--sugestoes">
+          <vtex:contentPlaceHolder id="sugestoes" />
+        </div>
+      </article>
+      
+    </div>
+
+  </section>
+
+
+  <vtex:template id="VTEXDEV-footer" />
+</body>
+<vtex:template id="VTEXDEV-import-scripts" />
+</html>

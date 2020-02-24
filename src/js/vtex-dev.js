@@ -30,3 +30,19 @@ if($('body').hasClass('catalog--search')) {
 	}
 	searchTerm();
 }
+
+// Search Not Found
+if($('body').hasClass('search-not-found')) {
+	function searchTerm() {
+		var term = '';
+		var params = window.location.search.split('&');
+		for (var i = 0; i < params.length; i++) {
+			var ftSplit = params[i].split('ft=');
+			if (ftSplit.length === 2) {
+				term = ftSplit[1];
+			}
+		}
+		$('#term-not-found').text(term);
+	}
+	searchTerm();
+}

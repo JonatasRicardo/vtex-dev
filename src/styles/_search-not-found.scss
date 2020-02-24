@@ -1,0 +1,16 @@
+.search-not-found {
+    #term-not-found {
+        color: $rosa;
+    }
+
+    .message {
+        h2 {
+            background: $cinsa;
+            padding: 20px 10px;
+        }
+        p {
+            padding: 10px;
+            font-size: 20px;
+        }
+    }
+}
