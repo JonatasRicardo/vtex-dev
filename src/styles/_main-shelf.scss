@@ -41,7 +41,31 @@
     }
 
     &__flags {
+        padding: 0 10px;
+        position: absolute;
+        top: -50px;
+        right: 0;
+        .flag {
+            height: 30px;
+            width: 30px;
+            overflow: hidden;
+            vertical-align: top;
+            font-size: 0;
+            text-indent: -99999px;
+            margin: 0 0 0 5px;
+            background: $rosa;
+            border-radius: 20px;
+            display: none;
 
+            &.colecao-teste{
+                display: inline-block;
+                background: $azul;
+            }
+            &.teste {
+                display: inline-block;
+                background: $rosa;
+            }
+        }
     }
     &__flag {
         &--discount {}

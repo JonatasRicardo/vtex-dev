@@ -8,6 +8,12 @@
             color: $azul;
         }
     }
+    .vtex__content-place-holder--banner-catalog{
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
     .vtex__search-result {
         .searchResultsTime, .compare {
             display: none;
