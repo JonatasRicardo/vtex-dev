@@ -121,3 +121,14 @@
         }
     }
 }
+
+.catalog--search {
+    .vtex__search-title {
+        .titulo-sessao { display: none; }
+        .search-term {
+            strong {
+                color: $rosa;
+            }
+        }
+    }
+}
