@@ -9,7 +9,7 @@ if($('body').hasClass('home')) {
     });
 }
 
-// Catalog
+// Catalog	
 if ($('body').hasClass('catalog')) {
     $(".vtex__search-navigator input[type='checkbox']").vtexSmartResearch({
         pageLimit:null, // Número máximo de páginas que o script irá retornar. Exemplo "pageLimit=3" só será retornado resultados até a terceira página
@@ -18,7 +18,18 @@ if ($('body').hasClass('catalog')) {
 		filtersMenu:".search-multiple-navigator", // Menu com os filtros
 		linksMenu:".search-single-navigator", // Menu de links
 		menuDepartament:".vtex__search-navigator .menu-departamento", // seletor do menu da página de departamentos
-    });
+	});
+
+	function filterMobile() {
+		$('.catalog__filter-show').on('click', function() {
+			$('body').addClass('show-mobile-filters');
+		});
+		$('.catalog__filter-go').on('click', function() {
+			$('body').removeClass('show-mobile-filters');
+		});
+	}
+
+	filterMobile();
 }
 
 // Catalog - Search

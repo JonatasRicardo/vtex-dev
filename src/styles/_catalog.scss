@@ -132,3 +132,46 @@
         }
     }
 }
+
+
+.show-mobile-filters {
+    .catalog__filter, .catalog__filter-go {
+        display: block !important;
+    }
+
+    .catalog__filter {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: $branco;
+        z-index: 999;
+
+        a, label {
+            display: block;
+        }
+    }
+
+    .catalog__filter-go{
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100vw;
+        background: $rosa;
+        color: $branco;
+        font-size: 24px;
+    }
+
+}
+.catalog__filter-show {
+    width: 90vw;
+    position: fixed;
+    bottom: 2vh;
+    left: 5vw;
+    margin: 0;
+    background: $azul;
+    z-index: 999;
+    color: $rosa;
+    font-size: 24px;
+}
