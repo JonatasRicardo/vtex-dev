@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="en-us">
+
+<head>
+  <vtex:template id="VTEXDEV-import-head" />
+</head>
+
+<body id="product">
+  <vtex:template id="VTEXDEV-header" />
+
+  <section class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="vtex__bread-crumb">
+                <vtex.cmc:breadCrumb />
+            </div>
+        </div>
+
+        <div class="product__image col-lg-5">
+            <div class="vtex__product-image">
+                <vtex.cmc:ProductImage/>
+            </div>
+        </div>
+
+        <div class="product__info col-lg-7">
+            <div class="vtex__product-name">
+                <vtex.cmc:productName/>
+            </div>
+
+            <div class="vtex__sku-price">
+                <vtex.cmc:skuPrice/>
+            </div>
+
+            <div class="product__flags">
+                <div class="vtex__discount-hight-light"><vtex.cmc:discountHightLight/></div>
+                <div class="vtex__hight-light"><vtex.cmc:HightLight/></div>
+            </div>
+
+            <div class="vtex__sku-selection">
+                <vtex.cmc:skuSelection />
+            </div>
+
+            <div class="vtex__buy-button">
+                <vtex.cmc:BuyButton/>
+            </div>
+
+            <div class="vtex__product-description">
+                <vtex.cmc:ProductDescription/>
+            </div>
+
+            <div class="vtex__product-specification">
+                <vtex.cmc:productSpecification/>
+            </div>
+        </div>
+
+        <section class="col-12 vtex__content-place-holder vtex__content-place-holder--sugestoes">
+            <vtex:contentPlaceHolder id="sugestoes" />
+        </section>
+            
+    </div>
+
+  </section>
+
+
+  <vtex:template id="VTEXDEV-footer" />
+</body>
+<vtex:template id="VTEXDEV-import-scripts" />
+</html>
