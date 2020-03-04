@@ -57,3 +57,39 @@ if($('body').hasClass('search-not-found')) {
 	}
 	searchTerm();
 }
+
+if($('body').hasClass('product')) {
+	// substituindo função global da vtex
+	function LoadZoom() {
+		if ($('.image-zoom').length > 0) {
+			var optionsZoom = {
+				zoomType: 'innerzoom',
+				//innerzoom/standard/reverse/drag
+				// zoomWidth: width,
+				// zoomHeight: height,
+				preloadText: '',
+				title: '',
+				lens: true,
+				imageOpacity: 0.4,
+				alwaysOn: false,
+				showEffect: 'show',
+				//show/fadein
+				hideEffect: 'hide',
+				//hide/fadeout
+				fadeinSpeed: 'slow',
+				//fast/slow/number
+				fadeoutSpeed: '2000' //fast/slow/number
+			};
+			$('.image-zoom').jqzoom(optionsZoom);
+		}
+	}
+	
+	var initialZoomHtml = $('#include').html();
+	$(window).on('resize', function() {
+		var currentImage = $('#image').html();
+		$('#include').html(initialZoomHtml);
+		$('#image').html(currentImage);
+		$('.thumbs .ON').click();
+		LoadZoom();
+	});
+}
