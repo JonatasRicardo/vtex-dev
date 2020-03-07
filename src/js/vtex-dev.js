@@ -45,14 +45,7 @@ if($('body').hasClass('catalog--search')) {
 // Search Not Found
 if($('body').hasClass('search-not-found')) {
 	function searchTerm() {
-		var term = '';
-		var params = window.location.search.split('&');
-		for (var i = 0; i < params.length; i++) {
-			var ftSplit = params[i].split('ft=');
-			if (ftSplit.length === 2) {
-				term = ftSplit[1];
-			}
-		}
+		var term = getParamFromUrl(window.location.href, 'ft');
 		$('#term-not-found').text(term);
 	}
 	searchTerm();
@@ -83,7 +76,6 @@ if($('body').hasClass('product')) {
 			$('.image-zoom').jqzoom(optionsZoom);
 		}
 	}
-	
 	var initialZoomHtml = $('#include').html();
 	$(window).on('resize', function() {
 		var currentImage = $('#image').html();
@@ -92,4 +84,44 @@ if($('body').hasClass('product')) {
 		$('.thumbs .ON').click();
 		LoadZoom();
 	});
+
+	function video() {
+		if ($('.vtex__product-image')) {
+			var videoUrl = $('.value-field.Videos').text();
+			var videoId = getParamFromUrl(videoUrl, 'v');
+			$('.vtex__product-image').prepend('<button class="product__video-btn">ver vídeo</button>');
+			$('body').append('<div class="product__video-modal"><iframe  width="420" height="315" src="https://www.youtube.com/embed/'+videoId+'"></iframe></div>')
+		
+			$('.product__video-btn').on('click', function() {
+				$('.product__video-modal').fadeIn();
+			})
+			$('.product__video-modal').on('click', function() {
+				$('.product__video-modal').fadeOut();
+			})
+
+		}
+	}
+	video();
+
+	function manualUsuario() {
+		var $manualUsuarioEl = $('.value-field.Manual-do-usuario');
+		var manualLink = $manualUsuarioEl.text();
+		$manualUsuarioEl.html('<a href="'+manualLink+'" target="_blank">Baixar manual</a>').addClass('ativo');
+	}
+	manualUsuario();
+
+}
+
+function getParamFromUrl(url, param) {
+	if (url.indexOf('?') === -1) return '';
+
+	var value = '';
+	var params = url.split('?')[1].split('&');
+	for (var i = 0; i < params.length; i++) {
+		var ftSplit = params[i].split(param+'=');
+		if (ftSplit.length === 2 && params[i].indexOf(param) === 0) {
+			value = ftSplit[1];
+		}
+	}
+	return value;
 }
