@@ -85,6 +85,45 @@
         }
     }
 
+    .vtex__sku-selection {
+        ul {
+            padding: 0;
+        }
+        li {
+            list-style: none;
+        }
+
+        .specification {
+            color: $rosa;
+            margin-bottom: 10px;
+        }
+        .select.skuList{
+            margin-bottom: 10px;
+            input {
+                display: none;
+            }
+            input:checked + label {
+                border-color: $rosa;
+                color: $rosa;
+            }
+            label {
+                font-size: 12px;
+                padding: 5px;
+                border: 1px solid #ccc;
+                margin-right: 5px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .portal-notify-me-ref {
+        input {
+            border: 1px solid $rosa;
+            margin-right: 5px;
+            color: $rosa;
+        }
+    }
+
     .vtex__product-description{
         padding: 20px;
         background: $cinza;
