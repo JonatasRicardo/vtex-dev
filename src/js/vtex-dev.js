@@ -110,6 +110,26 @@ if($('body').hasClass('product')) {
 	}
 	manualUsuario();
 
+	function addToCart(e) {
+		e.preventDefault();
+		var urlCart = $('.buy-button-ref').attr('href');
+		var skuId = getParamFromUrl(urlCart, 'sku');
+		if (!skuId) return alert('selecione uma opção');
+		
+		var item = {
+			id: skuId,
+			quantity: 1,
+			seller: '1'
+		};
+		vtexjs.checkout.getOrderForm().then(function() {
+		  vtexjs.checkout.addToCart([item])
+			.done(function(orderForm) {
+			  alert('Item adicionado!');
+			});
+		});
+	}
+	$('.buy-button').on('click', addToCart);
+
 }
 
 function getParamFromUrl(url, param) {
