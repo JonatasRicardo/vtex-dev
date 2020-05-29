@@ -124,7 +124,7 @@ if($('body').hasClass('product')) {
 		vtexjs.checkout.getOrderForm().then(function() {
 		  vtexjs.checkout.addToCart([item])
 			.done(function(orderForm) {
-			  alert('Item adicionado!');
+			  window.location.href = "/checkout/#/cart";
 			});
 		});
 	}

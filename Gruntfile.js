@@ -89,22 +89,40 @@
           }]
         },
         js: {
-          files: [{
-            expand: true,
-            flatten: true,
-            cwd: 'src/',
-            src: ['**/*.js'],
-            dest: 'build/arquivos/'
-          }]
+          files: [
+            {
+              expand: true,
+              flatten: true,
+              cwd: 'src/',
+              src: ['**/*.js'],
+              dest: 'build/arquivos/'
+            },
+            {
+              expand: true,
+              flatten: true,
+              cwd: 'src/checkout/js',
+              src: ['**/*.js'],
+              dest: 'build/files/'
+            }
+          ]
         },
         css: {
-          files: [{
-            expand: true,
-            flatten: true,
-            cwd: 'src/',
-            src: ['**/*.css'],
-            dest: 'build/arquivos/'
-          }]
+          files: [
+            {
+              expand: true,
+              flatten: true,
+              cwd: 'src/',
+              src: ['**/*.css'],
+              dest: 'build/arquivos/'
+            },
+            {
+              expand: true,
+              flatten: true,
+              cwd: 'src/checkout/',
+              src: ['**/*.css'],
+              dest: 'build/files/'
+            }
+        ]
         }
       },
       coffee: {
@@ -126,14 +144,24 @@
             sourceMap: false,
             importer: tildeImporter
           },
-          files: [{
-            expand: true,
-            flatten: true,
-            cwd: 'src/',
-            src: ['**/*.scss'],
-            dest: 'build/arquivos/',
-            ext: '.css'
-          }]
+          files: [
+            {
+              expand: true,
+              flatten: true,
+              cwd: 'src/',
+              src: ['**/*.scss'],
+              dest: 'build/arquivos/',
+              ext: '.css'
+            },
+            {
+              expand: true,
+              flatten: true,
+              cwd: 'src/checkout/',
+              src: ['**/*.scss'],
+              dest: 'build/files/',
+              ext: '.css'
+            }
+          ]
         },
         min: {
           options: {
@@ -143,14 +171,24 @@
             outputStyle: 'compressed',
             sourceMapRoot: '../src/'
           },
-          files: [{
-            expand: true,
-            flatten: true,
-            cwd: 'src/',
-            src: ['**/*.scss'],
-            dest: 'build/arquivos/',
-            ext: '.min.css'
-          }]
+          files: [
+            {
+              expand: true,
+              flatten: true,
+              cwd: 'src/',
+              src: ['**/*.scss'],
+              dest: 'build/arquivos/',
+              ext: '.min.css'
+            },
+            {
+              expand: true,
+              flatten: true,
+              cwd: 'src/checkout/',
+              src: ['**/*.scss'],
+              dest: 'build/files/',
+              ext: '.min.css'
+            }
+          ]
         }
       },
       less: {
@@ -188,14 +226,24 @@
           }
         },
         main: {
-          files: [{
-            expand: true,
-            flatten: true,
-            cwd: 'build/',
-            src: ['**/*.js', '!**/*.min.js'],
-            dest: 'build/arquivos/',
-            ext: '.min.js'
-          }]
+          files: [
+            {
+              expand: true,
+              flatten: true,
+              cwd: 'build/',
+              src: ['**/*.js', '!**/*.min.js'],
+              dest: 'build/arquivos/',
+              ext: '.min.js'
+            },
+            {
+              expand: true,
+              flatten: true,
+              cwd: 'build/files/',
+              src: ['**/*.js', '!**/*.min.js'],
+              dest: 'build/files/',
+              ext: '.min.js'
+            }
+        ]
         }
       },
       sprite: {

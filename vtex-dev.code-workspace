@@ -2,6 +2,12 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "/Users/admin/Documents/Projects/vtex-dev-video-aulas"
+		},
+		{
+			"path": "/Users/admin/Documents/Projects/vtexdev-site"
 		}
 	]
 }

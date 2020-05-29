@@ -1,0 +1,37 @@
+.checkout-steps{
+    text-align: center;
+    padding: 20px;
+    &__item {
+        display: inline-block;
+        padding: 20px;
+        color: $branco;
+        background: $azul;
+
+        &--cart {
+            .step-cart & {
+                background: $rosa;
+            }
+        }
+        &--profile{
+            .step-profile & {
+                background: $rosa;
+            }
+        }
+        &--shipping{
+            .step-shipping & {
+                background: $rosa;
+            }
+        }
+        &--payment{
+            .step-payment & {
+                background: $rosa;
+            }
+        }
+        &--order-placed{
+            .step-order-placed & {
+                background: $rosa;
+            }
+        }
+    }
+
+}
