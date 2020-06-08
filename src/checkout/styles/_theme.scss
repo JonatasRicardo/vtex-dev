@@ -1,0 +1,67 @@
+$titleClientProfileData: "Seus Dados";
+$titleShipping: "Dados de Entrega";
+$titlePaymentData: "Dados de Pagamento";
+$titleTotalizers: "Resumo";
+
+.step, .cart, .totalizers {
+    border-color: $azul;
+}
+
+.step.active,
+.cart.active,
+.totalizers.active {
+    border-color: $rosa;
+}
+
+.accordion {
+    &-heading {
+
+    }
+    &-toggle{
+        color: $azul;
+        &-active{
+            color: $rosa;
+        }
+    }
+}
+
+
+// Text
+[data-i18n="clientProfileData.identification"] {
+    text-indent: -9999999px;
+    display: inline-flex;
+
+    &::before {
+        content: $titleClientProfileData;
+        text-indent: 0;
+    }
+}
+
+[data-i18n="shipping.title"] {
+    text-indent: -9999999px;
+    display: inline-flex;
+
+    &::before {
+        content: $titleShipping;
+        text-indent: 0;
+    }
+}
+
+[data-i18n="paymentData.payment"] {
+    text-indent: -9999999px;
+    display: inline-flex;
+
+    &::before {
+        content: $titlePaymentData;
+        text-indent: 0;
+    }
+}
+
+[data-i18n="totalizers.summary"] {
+    text-indent: -9999999px;
+    display: inline-flex;
+    &::before {
+        content: $titleTotalizers;
+        text-indent: 0;
+    }
+}

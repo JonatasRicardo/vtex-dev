@@ -13,6 +13,7 @@
             }
         }
         &--profile{
+            .step-email &,
             .step-profile & {
                 background: $rosa;
             }
